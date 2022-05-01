@@ -1,0 +1,4 @@
+
+# Curl request to query system
+# Authentication is required but no CredentialsProvider has been registered
+curl localhost:8888/application/default

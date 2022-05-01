@@ -1,0 +1,20 @@
+{
+  "name": "cloud_config_server",
+  "profiles": [
+    "production"
+  ],
+  "label": null,
+  "version": "4fc7ee7fa41976a23c7c4926fa7dd5e2e0614a76",
+  "state": null,
+  "propertySources": [
+    {
+      "name": "https://github.com/williamswalsh/demo_config_repo/application.yaml",
+      "source": {
+        "spring.profiles": "production",
+        "my_app.system.first_key": "This is from the configuration repository.",
+        "my_app.system.second_key": 3.14,
+        "my_app.system.third_key": 42
+      }
+    }
+  ]
+}
