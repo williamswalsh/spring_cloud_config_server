@@ -1,4 +1,4 @@
-# spring_cloud_config_server-
+# spring_cloud_config_server
 Spring Cloud Config server to host configuration
 
 ## Purpose
