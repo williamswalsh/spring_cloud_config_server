@@ -8,6 +8,10 @@ spring:
     cloud:
         config:
             server:
+#                Can disable decryption of encrypted git config values - this will move responsibility of decryption to the web-app
+#                retrieving config from the config server.
+#                encrypt:
+#                    enabled: false
                 git:
                     uri: https://github.com/williamswalsh/demo_config_repo
 #                    You can set the path for the server to check in the config repo using the following key
