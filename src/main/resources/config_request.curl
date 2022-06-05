@@ -1,4 +1,36 @@
 
 # Curl request to query system
 # Authentication is required but no CredentialsProvider has been registered
-curl localhost:8888/application/default
+# no specific application
+# no specific profile
+curl localhost:8888/application/uat
+
+# Request to production profile from application.yaml
+# specific application
+# specific profile
+curl localhost:8888/cloud_config_server/production
+
+# Request config from specific app "my_awesome_micro_service"
+# specific application
+# no specific profile
+curl localhost:8888/my_awesome_micro_service/default
+
+# Request config from specific app "my_awesome_micro_service"
+# specific application
+# specific profile
+curl localhost:8888/my_awesome_micro_service/prod
+
+# Format:
+curl localhost:8888/<spring.app.name of client application (micro-service)>/<PROFILE>/[<BRANCH_OR_LABEL>]
+
+# Defaults:
+curl localhost:8888/application/default/
+
+spring.app.name=cloud_config_server
+PROFILE=uat
+
+
+BRANCH_OR_LABEL=by default config is served from the master branch
+This allows you to change the value:
+spring.cloud.config.server.git.default-label=other_branch
+spring.cloud.config.server.git.default-label=other_label 

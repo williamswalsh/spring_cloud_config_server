@@ -2,8 +2,6 @@
 server:
     port: 8888
 
-
-
 spring:
     application:
         name: cloud_config_server
@@ -12,3 +10,16 @@ spring:
             server:
                 git:
                     uri: https://github.com/williamswalsh/demo_config_repo
+#                    You can set the path for the server to check in the config repo using the following key
+#                    search-paths: config, more-config, auth_service_folder? maybe?
+#                    default-label: can set this to a branch name or a "git label" name
+#                    this changes the default from "master"
+
+#                    username: username to authenticate to git repo
+#                    password: password to authenticate to git repo
+
+
+
+
+
+

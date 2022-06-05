@@ -1,7 +1,8 @@
+curl localhost:8888/cloud_config_server/prod
 {
   "name": "cloud_config_server",
   "profiles": [
-    "production"
+    "prod"
   ],
   "label": null,
   "version": "4fc7ee7fa41976a23c7c4926fa7dd5e2e0614a76",
@@ -10,8 +11,36 @@
     {
       "name": "https://github.com/williamswalsh/demo_config_repo/application.yaml",
       "source": {
-        "spring.profiles": "production",
+        "spring.profiles": "prod",
         "my_app.system.first_key": "This is from the configuration repository.",
+        "my_app.system.second_key": 3.14,
+        "my_app.system.third_key": 42
+      }
+    }
+  ]
+}
+curl localhost:8888/my_awesome_micro_service/prod
+{
+  "name": "my_awesome_micro_service",
+  "profiles": [
+    "prod"
+  ],
+  "label": null,
+  "version": "97cc6e498b4c3342c850100e2b4e15ad360a9eec",
+  "state": null,
+  "propertySources": [
+    {
+      "name": "https://github.com/williamswalsh/demo_config_repo/Config resource 'file [/var/folders/w1/sljbph_j44x9n9xg82k2fc7r0000gn/T/config-repo-1409835547961033353/my_awesome_micro_service.yaml' via location '' (document #0)",
+      "source": {
+        "spring.profiles": "prod",
+        "my.config.item": "3VN_M0R3_T0p$3Cr3+"
+      }
+    },
+    {
+      "name": "https://github.com/williamswalsh/demo_config_repo/Config resource 'file [/var/folders/w1/sljbph_j44x9n9xg82k2fc7r0000gn/T/config-repo-1409835547961033353/application.yaml' via location '' (document #0)",
+      "source": {
+        "spring.profiles": "prod",
+        "my_app.system.first_key": "This is from the prod profile.",
         "my_app.system.second_key": 3.14,
         "my_app.system.third_key": 42
       }
