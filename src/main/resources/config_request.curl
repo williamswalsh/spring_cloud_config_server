@@ -1,4 +1,11 @@
 
+# Encryption
+# -d -> POST verb
+# curl localhost:8888/encrypt -d "data"
+# then must add encrypted value to git with prefix '{cipher}...'
+curl localhost:8888/encrypt -d '3V3N_M0R3_T0p$3Cr3+'
+AQAQ/rrvr8bR6vT8tjhuWM5KgOprg7WIsoUfWaCHcLzR4SptiXxvHj146gdEZUwti6+1vrNyFlDIyErHSXKgejGJkJRGm+rDc0uQfah9di3IN1ZFAvwOclRfCAxApYXg4KAyRgeqJmBDV6t1HmClfwlVi+V5MX9XbH8/G4l+WErSL5bYo1vJtvpPm7ud42djPT4298iWqvV8ZVefz1GJDOBrFBq7aBBCoiLGlewZcKCWL35femIc1AXAGjPwuve6EHh9XXDnI+hV8hG53b7r8jjAQ6Mhp8pQA+1z0VukfyId0rgC083UbCB1BIO2oCba5tkJJfXAXrL/TuCQHi9eSqzIPmfmlIu20PN7wfwj1qliFLrG8m5PA3f6oIEaw4pcj7cAxcgYV4o7vCYC5vX3wNzn
+'{cipher}AQAQ/rrvr8bR6vT8tjhuWM5KgOprg7WIsoUfWaCHcLzR4SptiXxvHj146gdEZUwti6+1vrNyFlDIyErHSXKgejGJkJRGm+rDc0uQfah9di3IN1ZFAvwOclRfCAxApYXg4KAyRgeqJmBDV6t1HmClfwlVi+V5MX9XbH8/G4l+WErSL5bYo1vJtvpPm7ud42djPT4298iWqvV8ZVefz1GJDOBrFBq7aBBCoiLGlewZcKCWL35femIc1AXAGjPwuve6EHh9XXDnI+hV8hG53b7r8jjAQ6Mhp8pQA+1z0VukfyId0rgC083UbCB1BIO2oCba5tkJJfXAXrL/TuCQHi9eSqzIPmfmlIu20PN7wfwj1qliFLrG8m5PA3f6oIEaw4pcj7cAxcgYV4o7vCYC5vX3wNzn'
 # Curl request to query system
 # Authentication is required but no CredentialsProvider has been registered
 # no specific application

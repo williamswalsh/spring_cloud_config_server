@@ -1,24 +1,27 @@
 curl localhost:8888/cloud_config_server/prod
 {
   "name": "cloud_config_server",
-  "profiles": [
-    "prod"
-  ],
+  "profiles": ["prod"],
   "label": null,
-  "version": "4fc7ee7fa41976a23c7c4926fa7dd5e2e0614a76",
+  "version": "2e07bc7b71d690fe3ab7c0f1250457e86d6cf45c",
   "state": null,
   "propertySources": [
     {
-      "name": "https://github.com/williamswalsh/demo_config_repo/application.yaml",
+      "name": "https://github.com/williamswalsh/demo_config_repo/Config resource 'file [/var/folders/w1/sljbph_j44x9n9xg82k2fc7r0000gn/T/config-repo-8076227602752899958/application.yaml' via location '' (document #1)",
       "source": {
-        "spring.profiles": "prod",
-        "my_app.system.first_key": "This is from the configuration repository.",
+        "spring.config.activate.on-profile": "prod",
+        "my_app.system.first_key": "This is from the prod profile.",
         "my_app.system.second_key": 3.14,
         "my_app.system.third_key": 42
       }
+    },
+    {
+      "name": "https://github.com/williamswalsh/demo_config_repo/Config resource 'file [/var/folders/w1/sljbph_j44x9n9xg82k2fc7r0000gn/T/config-repo-8076227602752899958/application.yaml' via location '' (document #0)",
+      "source": { "some.common.config.item": "hello world, let's hold hands." }
     }
   ]
 }
+
 curl localhost:8888/my_awesome_micro_service/prod
 {
   "name": "my_awesome_micro_service",

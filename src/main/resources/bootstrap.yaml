@@ -1,0 +1,6 @@
+encrypt:
+  key-store:
+    alias: config_server_key
+    location: classpath:/config_server.jks
+    password: l3tm31n
+    secret: l3tm31n # Not secret because of this: -keypass s3cr3t  #  Ignoring user-specified -keypass value.
